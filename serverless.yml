@@ -11,10 +11,9 @@
 #
 # Happy Coding!
 
-service: lambda-youtube-transcript-api
-# app and org for use with dashboard.serverless.com
-#app: your-app-name
-#org: your-org-name
+org: houkasaurusrex
+app: lambda-youtube-transcript-api
+service: lambda
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -22,7 +21,7 @@ frameworkVersion: '2'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: python3.8
 
 # you can overwrite defaults here
 #  stage: dev
@@ -51,22 +50,22 @@ provider:
 # you can add packaging information here
 #package:
 #  include:
-#    - include-me.js
+#    - include-me.py
 #    - include-me-dir/**
 #  exclude:
-#    - exclude-me.js
+#    - exclude-me.py
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  get_youtube_transcript:
+    handler: handler.get_youtube_transcript
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
-#    events:
-#      - http:
-#          path: users/create
-#          method: get
+    events:
+      - http:
+          path: /
+          method: get
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
