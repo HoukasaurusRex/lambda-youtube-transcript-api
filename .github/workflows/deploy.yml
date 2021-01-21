@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Python ${{ matrix.python-version }}
-    - uses: actions/setup-python@v2
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
