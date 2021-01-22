@@ -23,6 +23,13 @@ provider:
   name: aws
   runtime: python3.8
 
+  # layers:
+  #   python-app-dependencies:
+  #     path: /
+  #     compatibleRuntimes:
+  #       - python3.8
+  #     description: "Dependencies for python functions"
+
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
@@ -110,3 +117,6 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+plugins:
+  - serverless-python-requirements

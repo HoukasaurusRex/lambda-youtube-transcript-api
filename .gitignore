@@ -21,3 +21,5 @@ var/
 
 # Python
 __pycache__
+vendored
+node_modules

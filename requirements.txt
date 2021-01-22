@@ -1,2 +1,2 @@
-youtube_transcript_api
-aws_lambda_powertools
+aws-lambda-powertools==1.9.1
+youtube-transcript-api==0.3.1

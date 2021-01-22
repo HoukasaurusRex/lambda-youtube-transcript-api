@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "JT Houk <jt@houk.space> (https://jt.houk.space/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-python-requirements": "^5.1.0"
+  }
 }
